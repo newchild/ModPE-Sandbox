@@ -50,3 +50,12 @@ C:\Users\Fabian Brand\Documents\GitHub\ModPE-Sandbox\JavaScript EnDecoder\obj\De
 C:\Users\Fabian Brand\Documents\GitHub\ModPE-Sandbox\JavaScript EnDecoder\obj\Debug\JavaScript EnDecoder.csproj.GenerateResource.Cache
 C:\Users\Fabian Brand\Documents\GitHub\ModPE-Sandbox\JavaScript EnDecoder\bin\Debug\JavaScript EnDecoder.exe.CodeAnalysisLog.xml
 C:\Users\Fabian Brand\Documents\GitHub\ModPE-Sandbox\JavaScript EnDecoder\bin\Debug\JavaScript EnDecoder.exe.lastcodeanalysissucceeded
+C:\Users\Fabian Brand\Documents\GitHub\ModPE-Sandbox\JavaScript EnDecoder\bin\Debug\leveldb-sharp.dll
+C:\Users\Fabian Brand\Documents\GitHub\ModPE-Sandbox\JavaScript EnDecoder\bin\Debug\MCPE Data Reader.dll
+C:\Users\Fabian Brand\Documents\GitHub\ModPE-Sandbox\JavaScript EnDecoder\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Fabian Brand\Documents\GitHub\ModPE-Sandbox\JavaScript EnDecoder\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Fabian Brand\Documents\GitHub\ModPE-Sandbox\JavaScript EnDecoder\bin\Debug\Snappy.NET.dll
+C:\Users\Fabian Brand\Documents\GitHub\ModPE-Sandbox\JavaScript EnDecoder\bin\Debug\Crc32C.NET.dll
+C:\Users\Fabian Brand\Documents\GitHub\ModPE-Sandbox\JavaScript EnDecoder\bin\Debug\MCPE Data Reader.pdb
+C:\Users\Fabian Brand\Documents\GitHub\ModPE-Sandbox\JavaScript EnDecoder\bin\Debug\Snappy.NET.xml
+C:\Users\Fabian Brand\Documents\GitHub\ModPE-Sandbox\JavaScript EnDecoder\bin\Debug\Crc32C.NET.xml

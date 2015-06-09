@@ -17,8 +17,8 @@ namespace JavaScript_EnDecoder
     {
         Level Runtime = new Level();
 		Engine Eng = new Engine();
-
-        public Form1()
+		ModPE modPEInstance = new ModPE();
+		public Form1()
         {
             
             InitializeComponent();
@@ -35,7 +35,7 @@ namespace JavaScript_EnDecoder
             StaticUtils.Focus();
             try
             {
-                Eng.Execute(CleanText(textBox1.Text.ToString()));
+                Eng.Execute(textBox1.Text.ToString());
             }
             catch (Exception except)
             {
@@ -46,21 +46,15 @@ namespace JavaScript_EnDecoder
 
         }
 
-        private string CleanText(string text)
-        {
-            return text.Replace("Level.getTile", "LevelGetTile").Replace("Level.setTile", "LevelSetTile").Replace("Level.getData", "LevelGetData").Replace("ModPE.setItem", "ModPESetItem");
-        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
             Eng.SetValue("clientMessage", new Action<object>(StaticUtils.log));
-            Eng.SetValue("LevelGetTile", new Func<int, int, int, int>(Runtime.getTile));
-            Eng.SetValue("LevelSetTile", new Action<int, int, int, int>(Runtime.setTile));
-            Eng.SetValue("LevelGetData", new Func<int, int, int, int>(Runtime.getData));
-            Eng.SetValue("ModPESetItem", new Action<int, string, int, string>(ModPE.setItem));
+            Eng.SetValue("Level", Runtime);
+			Eng.SetValue("ModPE", modPEInstance);
             this.Text = "modPE Sandbox";
-
+			LoadWorld.Visible = false;
             
         }
         
@@ -72,7 +66,7 @@ namespace JavaScript_EnDecoder
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
+			
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -161,10 +155,19 @@ namespace JavaScript_EnDecoder
 
 		private void LoadWorld_Click(object sender, EventArgs e)
 		{
-			DataReader WorldData = new DataReader(@"C:/level.ldb");
-			var chunk = WorldData.getChunkID(0, 0);
-			var BlockIDs = new List<int>();
-			BlockIDs.Add(WorldData.getBlockID(chunk, 0, 0, 0));
+			try
+			{
+				DataReader WorldData = new DataReader(@"C:/meh/level.ldb");
+				var chunk = WorldData.getChunkID(0, 0);
+				var BlockIDs = new List<int>();
+				BlockIDs.Add(WorldData.getBlockID(chunk, 0, 0, 0));
+				MessageBox.Show(BlockIDs[0].ToString());
+			}
+			catch (Exception es)
+			{
+				MessageBox.Show(es.ToString());
+			}
+			
 		}
 	}
 }

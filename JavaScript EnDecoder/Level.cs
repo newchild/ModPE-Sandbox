@@ -37,7 +37,7 @@ namespace JavaScript_EnDecoder
             var vec = (from vector in LevelDesign.Keys where vector.x == x && vector.y == y && vector.z == z select vector).FirstOrDefault();
             if(vec == null){
                 LevelDesign.Add(new Vector3(x, y, z),new Block(0, 0));
-                StaticUtils.log("Got Block of ID " + LevelDesign[vec].ID +" at position " + x + ", " + y + ", " + z);
+                StaticUtils.log("Got Block of ID 0 at position " + x + ", " + y + ", " + z);
                 return 0;
             }
             StaticUtils.log("Got Block of ID " + LevelDesign[vec].ID + " at position " + x + ", " + y + ", " + z);
