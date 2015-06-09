@@ -16,5 +16,10 @@ namespace JavaScript_EnDecoder
         {
             InitializeComponent();
         }
+
+        private void AttackHook_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

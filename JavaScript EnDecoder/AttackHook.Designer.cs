@@ -47,6 +47,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "AttackHook";
             this.Text = "AttackHook";
+            this.Load += new System.EventHandler(this.AttackHook_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

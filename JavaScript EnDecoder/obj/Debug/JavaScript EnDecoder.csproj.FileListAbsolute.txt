@@ -22,3 +22,15 @@ C:\Users\kaikun97\Documents\mcpe\ModPE-Sandbox\JavaScript EnDecoder\obj\Debug\Ja
 C:\Users\kaikun97\Documents\mcpe\ModPE-Sandbox\JavaScript EnDecoder\obj\Debug\JavaScript_EnDecoder.Form1.resources
 C:\Users\kaikun97\Documents\mcpe\ModPE-Sandbox\JavaScript EnDecoder\obj\Debug\JavaScript_EnDecoder.Properties.Resources.resources
 C:\Users\kaikun97\Documents\mcpe\ModPE-Sandbox\JavaScript EnDecoder\obj\Debug\JavaScript EnDecoder.csproj.GenerateResource.Cache
+C:\Users\kaikun97\Desktop\modpe sandbox\ModPE-Sandbox\JavaScript EnDecoder\bin\Debug\JavaScript EnDecoder.exe.config
+C:\Users\kaikun97\Desktop\modpe sandbox\ModPE-Sandbox\JavaScript EnDecoder\obj\Debug\JavaScript EnDecoder.exe
+C:\Users\kaikun97\Desktop\modpe sandbox\ModPE-Sandbox\JavaScript EnDecoder\obj\Debug\JavaScript EnDecoder.pdb
+C:\Users\kaikun97\Desktop\modpe sandbox\ModPE-Sandbox\JavaScript EnDecoder\bin\Debug\JavaScript EnDecoder.exe
+C:\Users\kaikun97\Desktop\modpe sandbox\ModPE-Sandbox\JavaScript EnDecoder\bin\Debug\JavaScript EnDecoder.pdb
+C:\Users\kaikun97\Desktop\modpe sandbox\ModPE-Sandbox\JavaScript EnDecoder\bin\Debug\Jint.dll
+C:\Users\kaikun97\Desktop\modpe sandbox\ModPE-Sandbox\JavaScript EnDecoder\obj\Debug\JavaScript_EnDecoder.AttackHook.resources
+C:\Users\kaikun97\Desktop\modpe sandbox\ModPE-Sandbox\JavaScript EnDecoder\obj\Debug\JavaScript_EnDecoder.Console.resources
+C:\Users\kaikun97\Desktop\modpe sandbox\ModPE-Sandbox\JavaScript EnDecoder\obj\Debug\JavaScript_EnDecoder.Form1.resources
+C:\Users\kaikun97\Desktop\modpe sandbox\ModPE-Sandbox\JavaScript EnDecoder\obj\Debug\JavaScript_EnDecoder.Properties.Resources.resources
+C:\Users\kaikun97\Desktop\modpe sandbox\ModPE-Sandbox\JavaScript EnDecoder\obj\Debug\JavaScript EnDecoder.csproj.GenerateResource.Cache
+C:\Users\kaikun97\Desktop\modpe sandbox\ModPE-Sandbox\JavaScript EnDecoder\obj\Debug\JavaScript_EnDecoder.about.resources
