@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using Jint;
+using MCPE_Data_Reader;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
@@ -15,7 +16,7 @@ namespace JavaScript_EnDecoder
     public partial class Form1 : Form
     {
         Level Runtime = new Level();
-        Jint.Engine Eng = new Jint.Engine();
+		Engine Eng = new Engine();
 
         public Form1()
         {
@@ -158,6 +159,12 @@ namespace JavaScript_EnDecoder
             textBox1.Font = font;
         }
 
-       
-    }
+		private void LoadWorld_Click(object sender, EventArgs e)
+		{
+			DataReader WorldData = new DataReader(@"C:/level.ldb");
+			var chunk = WorldData.getChunkID(0, 0);
+			var BlockIDs = new List<int>();
+			BlockIDs.Add(WorldData.getBlockID(chunk, 0, 0, 0));
+		}
+	}
 }
