@@ -34,3 +34,4 @@ C:\Users\kaikun97\Desktop\modpe sandbox\ModPE-Sandbox\JavaScript EnDecoder\obj\D
 C:\Users\kaikun97\Desktop\modpe sandbox\ModPE-Sandbox\JavaScript EnDecoder\obj\Debug\JavaScript_EnDecoder.Properties.Resources.resources
 C:\Users\kaikun97\Desktop\modpe sandbox\ModPE-Sandbox\JavaScript EnDecoder\obj\Debug\JavaScript EnDecoder.csproj.GenerateResource.Cache
 C:\Users\kaikun97\Desktop\modpe sandbox\ModPE-Sandbox\JavaScript EnDecoder\obj\Debug\JavaScript_EnDecoder.about.resources
+C:\Users\kaikun97\Desktop\modpe sandbox\ModPE-Sandbox\JavaScript EnDecoder\obj\Debug\JavaScript EnDecoder.csprojResolveAssemblyReference.cache

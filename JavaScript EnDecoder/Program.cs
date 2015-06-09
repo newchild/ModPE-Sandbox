@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Jint;
 
 namespace JavaScript_EnDecoder
 {
@@ -14,6 +15,7 @@ namespace JavaScript_EnDecoder
         [STAThread]
         static void Main()
         {
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             var MainForm = new Form1();

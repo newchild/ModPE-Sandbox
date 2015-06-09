@@ -16,8 +16,10 @@ namespace JavaScript_EnDecoder
     {
         Level Runtime = new Level();
         Jint.Engine Eng = new Jint.Engine();
+
         public Form1()
         {
+            
             InitializeComponent();
         }
 
@@ -37,6 +39,7 @@ namespace JavaScript_EnDecoder
             catch (Exception except)
             {
                 StaticUtils.log(except.ToString());
+                MessageBox.Show("Jint error");
             }
             
 
@@ -48,13 +51,16 @@ namespace JavaScript_EnDecoder
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        { 
+        {
+
             Eng.SetValue("clientMessage", new Action<object>(StaticUtils.log));
             Eng.SetValue("LevelGetTile", new Func<int, int, int, int>(Runtime.getTile));
             Eng.SetValue("LevelSetTile", new Action<int, int, int, int>(Runtime.setTile));
             Eng.SetValue("LevelGetData", new Func<int, int, int, int>(Runtime.getData));
             Eng.SetValue("ModPESetItem", new Action<int, string, int, string>(ModPE.setItem));
             this.Text = "modPE Sandbox";
+
+            
         }
         
 
@@ -96,6 +102,7 @@ namespace JavaScript_EnDecoder
 
         private void MenuLoad_Click(object sender, EventArgs e)
         {
+            panel2.Hide();
             if(panel1.Visible == true)
             {
                 panel1.Hide();
@@ -117,6 +124,38 @@ namespace JavaScript_EnDecoder
             {
                 e.Cancel = true;
             }        
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            panel1.Hide();
+            if (panel2.Visible == true)
+            {
+                panel2.Hide();
+            }
+            else
+                panel2.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            panel2.Hide();
+            Font font = new Font("Microsoft Sans Serif", 8.0f, FontStyle.Regular);
+            textBox1.Font = font;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            panel2.Hide();
+            Font font = new Font("Microsoft Sans Serif", 10.0f, FontStyle.Regular);
+            textBox1.Font = font;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            panel2.Hide();
+            Font font = new Font("Microsoft Sans Serif", 12.0f, FontStyle.Regular);
+            textBox1.Font = font;
         }
 
        
