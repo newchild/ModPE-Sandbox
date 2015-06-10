@@ -52,7 +52,7 @@ namespace JavaScript_EnDecoder
 
             Eng.SetValue("clientMessage", new Action<object>(StaticUtils.log));
             Eng.SetValue("Level", Runtime);
-			Eng.SetValue("ModPE", modPEInstance);
+			Eng.SetValue("ModPE", modPEInstance); //since the ModPE class is exposed here, we can call this function now from the scripting environment
             this.Text = "modPE Sandbox";
 			LoadWorld.Visible = false;
             
@@ -169,5 +169,10 @@ namespace JavaScript_EnDecoder
 			}
 			
 		}
-	}
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
