@@ -9,11 +9,23 @@ namespace JavaScript_EnDecoder
     class Level
     {
         private Dictionary<Vector3,Block> LevelDesign = new Dictionary<Vector3,Block>();
+
+		public Dictionary<Vector3, Block> getDesign()
+		{
+			return LevelDesign;
+		}
+
         public Level()
         {
             
         }
-        public void setTile(int x, int y, int z, int ID)
+
+		public Level(Dictionary<Vector3, Block> blocks)
+		{
+			LevelDesign = blocks;
+		}
+
+		public void setTile(int x, int y, int z, int ID)
         {
             var vec = (from vector in LevelDesign.Keys where vector.x == x && vector.y == y && vector.z == z select vector).FirstOrDefault();
             if (vec == null)

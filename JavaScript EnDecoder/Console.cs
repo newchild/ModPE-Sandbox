@@ -12,7 +12,12 @@ namespace JavaScript_EnDecoder
             InitializeComponent();
         }
 
-        public void LogToText(object text)
+		private void Console_LostFocus(object sender, EventArgs e)
+		{
+			this.SendToBack();
+		}
+
+		public void LogToText(object text)
         {
             this.TopMost = true;
             this.WindowState = FormWindowState.Normal;
