@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace JavaScript_EnDecoder
 {
+	[Serializable]
     class Vector3
     {
         public int x, y, z;

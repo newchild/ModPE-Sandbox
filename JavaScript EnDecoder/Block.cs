@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace JavaScript_EnDecoder
 {
+	[Serializable]
     class Block
     {
         public int ID, Data;

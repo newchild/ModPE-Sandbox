@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace JavaScript_EnDecoder
 {
+	[Serializable]
     class Item
     {//we need a item class to handle items easier
         private ItemType Type; //this will store the Item type lol
