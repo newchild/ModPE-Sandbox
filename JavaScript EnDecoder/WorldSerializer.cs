@@ -27,27 +27,31 @@ namespace JavaScript_EnDecoder
 			customBlocks = v3;
 		}
 
-		public Stream serialize()
+		public void serialize(string path)
 		{
-			var IOStream = new MemoryStream();
+			var IOStream = new FileStream(path, FileMode.Create);
 			var Serializer = new BinaryFormatter();
 			Serializer.Serialize(IOStream, this);
-			return IOStream;
+			IOStream.Close();
 		}
 
-		public static object Deserialize(Stream Input)
+		public static object Deserialize(string path)
 		{
-			
+			WorldSerializer retVal;
 			var Serializer = new BinaryFormatter();
+			var IOStream = new FileStream(path, FileMode.Open);
 			try
 			{
-				return Serializer.Deserialize(Input) as WorldSerializer;
+				retVal = Serializer.Deserialize(IOStream) as WorldSerializer;
 			}
 			catch(Exception e)
 			{
 				return e.ToString();
 			}
-			
+			IOStream.Close();
+			return retVal;
+
+
 		}
 
 		public Dictionary<Vector3, Block> getLevel()

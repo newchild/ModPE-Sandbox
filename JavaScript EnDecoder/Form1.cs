@@ -353,8 +353,21 @@ namespace JavaScript_EnDecoder
 		{
             panel3.Hide();
             WorldSerializer world = new WorldSerializer(Runtime.getDesign(), modPEInstance.getItems(), modPEInstance.getBlocks());
-			string text = world.serialize();
-			MessageBox.Show(text);
+			SaveFileDialog saveDlg = new SaveFileDialog();
+			saveDlg.AddExtension = true;
+			saveDlg.DefaultExt = ".wrld";
+			string path;
+			if(saveDlg.ShowDialog() == DialogResult.OK || saveDlg.ShowDialog() == DialogResult.Yes)
+			{
+				path = saveDlg.FileName;
+			}
+			else
+			{
+				StaticUtils.log("Error occured while trying to save the file.");
+				return;
+			}
+			world.serialize(path);
+
 		}
 
         private void button13_Click(object sender, EventArgs e)
