@@ -110,7 +110,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(204, 80);
             this.label1.TabIndex = 15;
-            this.label1.Text = "Mod-PE Sandbox v1.3\r\n\r\nCoded by kaikun97 and newchild\r\n\r\n(C) Copyright 2015, newc" +
+            this.label1.Text = "Mod-PE Sandbox v1.4\r\n\r\nCoded by kaikun97 and newchild\r\n\r\n(C) Copyright 2015, newc" +
     "hild";
             // 
             // button3

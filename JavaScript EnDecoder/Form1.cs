@@ -98,6 +98,7 @@ namespace JavaScript_EnDecoder
         private void MenuLoad_Click(object sender, EventArgs e)
         {
             panel2.Hide();
+            panel3.Hide();
             if(panel1.Visible == true)
             {
                 panel1.Hide();
@@ -123,6 +124,7 @@ namespace JavaScript_EnDecoder
 
         private void button5_Click(object sender, EventArgs e)
         {
+            panel3.Hide();
             panel1.Hide();
             if (panel2.Visible == true)
             {
@@ -162,7 +164,8 @@ namespace JavaScript_EnDecoder
 
 		private void ModTick_Click(object sender, EventArgs e)
 		{
-			if (!StaticUtils.ConsoleIsRunning())
+            panel3.Hide();
+            if (!StaticUtils.ConsoleIsRunning())
 			{
 				StaticUtils.startConsole();
 			}
@@ -348,9 +351,52 @@ namespace JavaScript_EnDecoder
 
 		private void Serialize_Click(object sender, EventArgs e)
 		{
-			WorldSerializer world = new WorldSerializer(Runtime.getDesign(), modPEInstance.getItems(), modPEInstance.getBlocks());
+            panel3.Hide();
+            WorldSerializer world = new WorldSerializer(Runtime.getDesign(), modPEInstance.getItems(), modPEInstance.getBlocks());
 			string text = world.serialize();
 			MessageBox.Show(text);
 		}
-	}
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            panel3.Hide();
+            //Console main = new Console();
+            //main.BringToFront();
+            if (!StaticUtils.ConsoleIsRunning())
+            {
+                StaticUtils.startConsole();
+            }
+            StaticUtils.Focus();
+            try
+            {
+                Eng.Execute(textBox1.Text.ToString());
+            }
+            catch (Exception except)
+            {
+                StaticUtils.log(except.ToString());
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            panel1.Hide();
+            panel2.Hide();
+            if (panel3.Visible == true)
+            {
+                panel3.Hide();
+            }
+            else
+                panel3.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
