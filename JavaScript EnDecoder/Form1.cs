@@ -17,11 +17,16 @@ namespace JavaScript_EnDecoder
 		ModPE modPEInstance = new ModPE();
 		public Form1()
         {
-            
             InitializeComponent();
+			DragDrop += Form1_DragDrop;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+		private void Form1_DragDrop(object sender, DragEventArgs e)
+		{
+			MessageBox.Show(e.Data.GetData(DataFormats.FileDrop).ToString());
+		}
+
+		private void button1_Click(object sender, EventArgs e)
         {
 			//Console main = new Console();
 			//main.BringToFront();
@@ -411,5 +416,16 @@ namespace JavaScript_EnDecoder
         {
 
         }
-    }
+
+		private void LoadWorld_Click(object sender, EventArgs e)
+		{
+			OpenFileDialog mert = new OpenFileDialog();
+			mert.Filter = "World File (.wrld)|*.wrld";
+			if(mert.ShowDialog() == DialogResult.OK)
+			{
+				var x = WorldSerializer.Deserialize(mert.FileName) as WorldSerializer;
+				Runtime = new Level(x.getLevel());
+			}
+		}
+	}
 }

@@ -72,6 +72,7 @@ namespace JavaScript_EnDecoder
 			this.button11 = new System.Windows.Forms.Button();
 			this.button12 = new System.Windows.Forms.Button();
 			this.label8 = new System.Windows.Forms.Label();
+			this.LoadWorld = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -99,6 +100,9 @@ namespace JavaScript_EnDecoder
 			// 
 			// textBox1
 			// 
+			this.textBox1.AcceptsReturn = true;
+			this.textBox1.AcceptsTab = true;
+			this.textBox1.AllowDrop = true;
 			this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -523,6 +527,7 @@ namespace JavaScript_EnDecoder
 			this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
 			this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.panel3.Controls.Add(this.LoadWorld);
 			this.panel3.Controls.Add(this.button13);
 			this.panel3.Controls.Add(this.button11);
 			this.panel3.Controls.Add(this.button12);
@@ -587,8 +592,24 @@ namespace JavaScript_EnDecoder
 			this.label8.Text = "junk here not visible, here just in case";
 			this.label8.Visible = false;
 			// 
+			// LoadWorld
+			// 
+			this.LoadWorld.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.LoadWorld.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
+			this.LoadWorld.FlatAppearance.BorderSize = 2;
+			this.LoadWorld.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.LoadWorld.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.LoadWorld.Location = new System.Drawing.Point(7, 97);
+			this.LoadWorld.Name = "LoadWorld";
+			this.LoadWorld.Size = new System.Drawing.Size(193, 31);
+			this.LoadWorld.TabIndex = 14;
+			this.LoadWorld.Text = "Load Environment";
+			this.LoadWorld.UseVisualStyleBackColor = true;
+			this.LoadWorld.Click += new System.EventHandler(this.LoadWorld_Click);
+			// 
 			// Form1
 			// 
+			this.AllowDrop = true;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
@@ -689,6 +710,7 @@ namespace JavaScript_EnDecoder
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Label label8;
-    }
+		private System.Windows.Forms.Button LoadWorld;
+	}
 }
 
