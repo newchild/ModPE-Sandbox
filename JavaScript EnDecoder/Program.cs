@@ -18,8 +18,7 @@ namespace JavaScript_EnDecoder
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            var MainForm = new Form1();
-            Application.Run(MainForm);
+            Application.Run(new Form1());
             
         }
     }

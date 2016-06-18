@@ -37,7 +37,7 @@ namespace JavaScript_EnDecoder
 			StaticUtils.Focus();
             try
             {
-                Eng.Execute(textBox1.Text.ToString());
+                Eng.Execute(maineditfield.Text.ToString());
             }
             catch (Exception except)
             {
@@ -73,51 +73,6 @@ namespace JavaScript_EnDecoder
 			Eng.SetValue("ModPE", modPEInstance); //since the ModPE class is exposed here, we can call this function now from the scripting environment
             this.Text = "modPE Sandbox";       
         }
-        
-        private void button3_Click(object sender, EventArgs e)
-        {
-            panel1.Hide();
-            DialogResult result = Saver.ShowDialog();
-            if (result == DialogResult.OK)
-            {
-                string name = Saver.FileName;
-                File.WriteAllText(name, textBox1.Text);
-            }
-        }
-
-        private void Saver_FileOk(object sender, CancelEventArgs e)
-        {
-            
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            panel1.Hide();
-            if (Opener.ShowDialog() == DialogResult.OK)
-            {
-                textBox1.Text = System.IO.File.ReadAllText(Opener.FileName);
-            }
-
-        }
-
-        private void MenuLoad_Click(object sender, EventArgs e)
-        {
-            panel2.Hide();
-            panel3.Hide();
-            if(panel1.Visible == true)
-            {
-                panel1.Hide();
-            }
-            else
-                panel1.Show();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            panel1.Hide();
-            about aboutopen = new about();
-            aboutopen.Show();
-        }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -127,41 +82,6 @@ namespace JavaScript_EnDecoder
             }        
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            panel3.Hide();
-            panel1.Hide();
-            if (panel2.Visible == true)
-            {
-                panel2.Hide();
-            }
-            else
-                panel2.Show();
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            panel2.Hide();
-            Font font = new Font("Microsoft Sans Serif", 8.0f, FontStyle.Regular);
-            textBox1.Font = font;
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            panel2.Hide();
-            Font font = new Font("Microsoft Sans Serif", 10.0f, FontStyle.Regular);
-            textBox1.Font = font;
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            panel2.Hide();
-            Font font = new Font("Microsoft Sans Serif", 12.0f, FontStyle.Regular);
-            textBox1.Font = font;
-        }
-
-		
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -169,7 +89,6 @@ namespace JavaScript_EnDecoder
 
 		private void ModTick_Click(object sender, EventArgs e)
 		{
-            panel3.Hide();
             if (!StaticUtils.ConsoleIsRunning())
 			{
 				StaticUtils.startConsole();
@@ -177,7 +96,7 @@ namespace JavaScript_EnDecoder
 			StaticUtils.Focus();
 			try
 			{
-				Eng.Execute(textBox1.Text.ToString());
+				Eng.Execute(maineditfield.Text.ToString());
 			}
 			catch (Exception except)
 			{
@@ -354,69 +273,6 @@ namespace JavaScript_EnDecoder
 				}
 		}
 
-		private void Serialize_Click(object sender, EventArgs e)
-		{
-            panel3.Hide();
-            WorldSerializer world = new WorldSerializer(Runtime.getDesign(), modPEInstance.getItems(), modPEInstance.getBlocks());
-			SaveFileDialog saveDlg = new SaveFileDialog();
-			saveDlg.AddExtension = true;
-			saveDlg.DefaultExt = ".wrld";
-			string path;
-			if(saveDlg.ShowDialog() == DialogResult.OK || saveDlg.ShowDialog() == DialogResult.Yes)
-			{
-				path = saveDlg.FileName;
-			}
-			else
-			{
-				StaticUtils.log("Error occured while trying to save the file.");
-				return;
-			}
-			world.serialize(path);
-
-		}
-
-        private void button13_Click(object sender, EventArgs e)
-        {
-            panel3.Hide();
-            //Console main = new Console();
-            //main.BringToFront();
-            if (!StaticUtils.ConsoleIsRunning())
-            {
-                StaticUtils.startConsole();
-            }
-            StaticUtils.Focus();
-            try
-            {
-                Eng.Execute(textBox1.Text.ToString());
-            }
-            catch (Exception except)
-            {
-                StaticUtils.log(except.ToString());
-            }
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            panel1.Hide();
-            panel2.Hide();
-            if (panel3.Visible == true)
-            {
-                panel3.Hide();
-            }
-            else
-                panel3.Show();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
 		private void LoadWorld_Click(object sender, EventArgs e)
 		{
 			OpenFileDialog mert = new OpenFileDialog();
@@ -427,5 +283,117 @@ namespace JavaScript_EnDecoder
 				Runtime = new Level(x.getLevel());
 			}
 		}
-	}
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Opener.ShowDialog() == DialogResult.OK)
+            {
+                maineditfield.Text = System.IO.File.ReadAllText(Opener.FileName);
+            }
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult result = Saver.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                string name = Saver.FileName;
+                File.WriteAllText(name, maineditfield.Text);
+            }
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void runToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!StaticUtils.ConsoleIsRunning())
+            {
+                StaticUtils.startConsole();
+            }
+            StaticUtils.Focus();
+            try
+            {
+                Eng.Execute(maineditfield.Text.ToString());
+            }
+            catch (Exception except)
+            {
+                StaticUtils.log(except.ToString());
+            }
+        }
+
+        private void saveEnvironmentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WorldSerializer world = new WorldSerializer(Runtime.getDesign(), modPEInstance.getItems(), modPEInstance.getBlocks());
+            SaveFileDialog saveDlg = new SaveFileDialog();
+            saveDlg.AddExtension = true;
+            saveDlg.DefaultExt = ".wrld";
+            string path;
+            if (saveDlg.ShowDialog() == DialogResult.OK || saveDlg.ShowDialog() == DialogResult.Yes)
+            {
+                path = saveDlg.FileName;
+            }
+            else
+            {
+                StaticUtils.log("Error occured while trying to save the file.");
+                return;
+            }
+            world.serialize(path);
+        }
+
+        private void loadEnvironmentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog mert = new OpenFileDialog();
+            mert.Filter = "World File (.wrld)|*.wrld";
+            if (mert.ShowDialog() == DialogResult.OK)
+            {
+                var x = WorldSerializer.Deserialize(mert.FileName) as WorldSerializer;
+                Runtime = new Level(x.getLevel());
+            }
+        }
+
+        private void callHookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!StaticUtils.ConsoleIsRunning())
+            {
+                StaticUtils.startConsole();
+            }
+            StaticUtils.Focus();
+            try
+            {
+                Eng.Execute(maineditfield.Text.ToString());
+            }
+            catch (Exception except)
+            {
+                StaticUtils.log(except.ToString());
+            }
+            var helper = ((KeyValuePair<string, int>)HookList.SelectedItem).Key;
+            var Hook = Eng.GetValue(helper);
+            try
+            {
+                callHook(Hook, Convert.ToInt32(HookList.SelectedValue));
+            }
+
+            catch (Exception ex)
+            {
+                StaticUtils.log("The Hook is either missing or invalid");
+            }
+        }
+
+        private void fontSizeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (fontchoose.ShowDialog() == DialogResult.OK)
+            {
+                maineditfield.Font = fontchoose.Font;
+            }
+        }
+
+        private void aboutModPESandboxToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            about aboutopen = new about();
+            aboutopen.Show();
+        }
+    }
 }

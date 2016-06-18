@@ -5,6 +5,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 namespace JavaScript_EnDecoder
 {
+    //does this need changing for the new LevelDB format?
 	[Serializable]
 	class WorldSerializer
 	{

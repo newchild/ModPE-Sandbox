@@ -58,3 +58,21 @@ C:\Users\kaikun97\Desktop\modpe sandbox\ModPE-Sandbox\JavaScript EnDecoder\bin\D
 C:\Users\kaikun97\Desktop\modpe sandbox\ModPE-Sandbox\JavaScript EnDecoder\bin\Debug\MCPE Data Reader.dll
 C:\Users\kaikun97\Desktop\modpe sandbox\ModPE-Sandbox\JavaScript EnDecoder\bin\Debug\Newtonsoft.Json.dll
 C:\Users\kaikun97\Desktop\modpe sandbox\ModPE-Sandbox\JavaScript EnDecoder\bin\Debug\Newtonsoft.Json.xml
+C:\Users\kaikun97\Documents\ModPe-Sandbox\JavaScript EnDecoder\bin\Debug\JavaScript EnDecoder.exe.config
+C:\Users\kaikun97\Documents\ModPe-Sandbox\JavaScript EnDecoder\obj\Debug\JavaScript EnDecoder.exe
+C:\Users\kaikun97\Documents\ModPe-Sandbox\JavaScript EnDecoder\obj\Debug\JavaScript EnDecoder.pdb
+C:\Users\kaikun97\Documents\ModPe-Sandbox\JavaScript EnDecoder\bin\Debug\JavaScript EnDecoder.exe
+C:\Users\kaikun97\Documents\ModPe-Sandbox\JavaScript EnDecoder\bin\Debug\JavaScript EnDecoder.pdb
+C:\Users\kaikun97\Documents\ModPe-Sandbox\JavaScript EnDecoder\bin\Debug\JavaScript EnDecoder.exe.CodeAnalysisLog.xml
+C:\Users\kaikun97\Documents\ModPe-Sandbox\JavaScript EnDecoder\bin\Debug\JavaScript EnDecoder.exe.lastcodeanalysissucceeded
+C:\Users\kaikun97\Documents\ModPe-Sandbox\JavaScript EnDecoder\bin\Debug\Jint.dll
+C:\Users\kaikun97\Documents\ModPe-Sandbox\JavaScript EnDecoder\bin\Debug\leveldb-sharp.dll
+C:\Users\kaikun97\Documents\ModPe-Sandbox\JavaScript EnDecoder\bin\Debug\MCPE Data Reader.dll
+C:\Users\kaikun97\Documents\ModPe-Sandbox\JavaScript EnDecoder\bin\Debug\Newtonsoft.Json.dll
+C:\Users\kaikun97\Documents\ModPe-Sandbox\JavaScript EnDecoder\bin\Debug\Newtonsoft.Json.xml
+C:\Users\kaikun97\Documents\ModPe-Sandbox\JavaScript EnDecoder\obj\Debug\JavaScript EnDecoder.csprojResolveAssemblyReference.cache
+C:\Users\kaikun97\Documents\ModPe-Sandbox\JavaScript EnDecoder\obj\Debug\JavaScript_EnDecoder.about.resources
+C:\Users\kaikun97\Documents\ModPe-Sandbox\JavaScript EnDecoder\obj\Debug\JavaScript_EnDecoder.Console.resources
+C:\Users\kaikun97\Documents\ModPe-Sandbox\JavaScript EnDecoder\obj\Debug\JavaScript_EnDecoder.Form1.resources
+C:\Users\kaikun97\Documents\ModPe-Sandbox\JavaScript EnDecoder\obj\Debug\JavaScript_EnDecoder.Properties.Resources.resources
+C:\Users\kaikun97\Documents\ModPe-Sandbox\JavaScript EnDecoder\obj\Debug\JavaScript EnDecoder.csproj.GenerateResource.Cache
